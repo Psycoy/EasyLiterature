@@ -25,13 +25,13 @@ pip3 install easyliter
 2. install from source
 ```bash
 git clone https://github.com/Psycoy/EasyLiterature.git
-cd easyLiterature
+cd EasyLiterature
 python setup.py install
 ```
 
 ### Arguments
 ```bash
-autolter
+easyliter
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -53,13 +53,13 @@ Assuming `input` is the folder path of the literature notes (.md files) and `out
 
 ```bash
 # Update all md files in the input folder
-autoliter -i input -o output 
+easyliter -i input -o output 
 
 # Only update the input/example.md file
-autoliter -i input/example.md -o output  
+easyliter -i input/example.md -o output  
 
 # -d is an optional flag, when -i is a folder path, using -d will delete unrelated pdf files in the PDF folder from the literature notes content
-autoliter -i input -o output -d
+easyliter -i input -o output -d
 ```
 
 ### Migrating Notes and PDF Files
@@ -67,10 +67,10 @@ When you need to move the literature notes or the PDF folder, the links to the P
 
 ```bash
 # Update all md files in the input folder
-autoliter -i input -m movedPDFs/
+easyliter -i input -m movedPDFs/
 
 # Only update the input/example.md file
-autoliter -i input/example.md -m movedPDFs/  
+easyliter -i input/example.md -m movedPDFs/  
 ```
 
 
