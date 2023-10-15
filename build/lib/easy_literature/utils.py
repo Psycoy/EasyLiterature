@@ -163,7 +163,7 @@ def get_update_content(m, note_file, pdfs_path, proxy):
                                             )
                     replace_dict[literature] = replaced_literature
         else:
-            logger.info("Can not find the literature {}.".format(literature_id))
+            logger.info("Can not find the literature {}. You may need to manually download this paper, a template has been generated in the markdown file. Put the pdf file in the folder you specified just now and add its name in the '(pdf)' of your markdown entry.".format(literature_id))
             replaced_literature = "- **{}**. ([pdf]({})).".format(
                                             literature_id, f'{pdfs_path}/your_pdf_name.pdf'
                                             )
