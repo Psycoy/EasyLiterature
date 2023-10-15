@@ -164,4 +164,8 @@ def get_update_content(m, note_file, pdfs_path, proxy):
                     replace_dict[literature] = replaced_literature
         else:
             logger.info("Can not find the literature {}.".format(literature_id))
+            replaced_literature = "- **{}**. ([pdf]({})).".format(
+                                            literature_id, f'{pdfs_path}/your_pdf_name.pdf'
+                                            )
+            replace_dict[literature] = replaced_literature
     return replace_dict 
