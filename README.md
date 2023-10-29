@@ -15,13 +15,6 @@ Compared to autoLiterature, **EasyLiterature** is much easier to use and support
 与之前的实现相比，EasyLiterature兼容之前实现的所有功能，并且支持更多功能，比如：1. 基于标题的论文匹配；2. Google Scholar和DLBP（全球两大主要paper数据库）的论文搜索和下载；3. 引用统计；4. 手动信息更新助手；5. 容错搜索匹配；等等。之前的实现由于数据库的限制，很多文章都找不到。EasyLiterature得益于增加了Google Scholar和DLBP的支持，几乎覆盖了所有论文。
 
 
-**Recognition rules (识别规则)：**
-- Automatically recognizes `- {xxx}`。
-- If the notes file contains`- {paper_id}`, it will download the information of that literature, but not the PDF.
-- If the notes file contains `- {{paper_id}}`, it will download both the information of that literature and the PDF.
-
-Note: `paper_id` supports `the title of the article`, published articles' `doi`, and pre-published articles' `arvix_id`, `biorvix_id`, and `medrvix_id`. It will try all the possible sources online.
-
 ## Install (安装)
 1. pip install (to do)
 ```bash 
@@ -54,6 +47,21 @@ optional arguments:
   -m MIGRATION, --migration MIGRATION
                         the pdf folder path you want to reconnect to
 ```
+
+
+## Recognition rules (识别规则)：
+- Automatically recognizes `- {xxx}`。
+- If the notes file contains`- {paper_id}`, it will download the information of that literature, but not the PDF.
+- If the notes file contains `- {{paper_id}}`, it will download both the information of that literature and the PDF.
+
+Note: `paper_id` supports `the title of the article`, published articles' `doi`, and pre-published articles' `arvix_id`, `biorvix_id`, and `medrvix_id`. It will try all the possible sources online.
+
+自动识别 - {xxx}。
+当笔记文件中包含- {paper_id}时候，会下载该文献的信息，不下载PDF。
+当笔记文件中包含- {{paper_id}}时候，会下载该文献的信息，以及PDF。
+
+注意：paper_id支持文章标题，已发表文章的doi, 预发布文章的arvix_id, biorvix_id, medrvix_id。EasyLiterature会从多个数据库自动识别需要收集和下载的论文，几乎覆盖所有目前存在的论文。
+
 
 ## Usage（使用）
 ### Basic Usage（基本使用）
