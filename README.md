@@ -2,10 +2,10 @@
 **EasyLiterature** is a Python-based command line tool for automatic literature management. Welcome star or contribute!
 
 Simply list the paper titles (or ids) you want to read in a markdown file and it will automatically `collect and refine its information in the markdown file`, `download the pdf to your local machine`, and `link the pdf to your paper in the markdown file`. You can forever keep your notes within the pdfs and mds on your local machine or cloud driver.
-
+---
 **A demo of the entries in your markdown note:**
 ![demo](figures/demo.png)
-
+---
 Inspired by [Mu Li](https://www.bilibili.com/video/BV1nA41157y4), adapted from [autoLiterature](https://github.com/wilmerwang/autoLiterature). 
 Compared to autoLiterature, **EasyLiterature** is much easier to use and supports a wider range of features, such as `title-based paper match`, `paper search and download on Google Scholar and DLBP` (the two main sites for scholars), `citation statistics`, `mannual information update assitant`, etc. **EasyLiterature covers almost all papers thanks to the support of Google Scholar and DLBP!**
 
@@ -16,10 +16,10 @@ Compared to autoLiterature, **EasyLiterature** is much easier to use and support
 之前沐神（李沐）做过一期视频讲如何阅读文献和整理，我觉得讲得非常好，[链接](https://www.bilibili.com/video/BV1nA41157y4)。
 
 简单来说，在 Markdown 文件中简单列出想要阅读的论文标题（或ID），它会自动收集并在Markdown文件中完善相关信息，下载论文的PDF到本地机器，并将PDF链接到Markdown文件中的论文。通过这样的流程，我们可以实现永久保存实时编辑的论文PDF和Markdown中的笔记，无论是在本地机器还是云端，并且方便论文一站式分类和管理。
-
+---
 **markdown文件中的论文信息条目（示意）:**
 ![demo](figures/demo.png)
-
+---
 与之前的实现相比，EasyLiterature兼容之前实现的所有功能，并且支持更多功能，比如：1. 基于标题的论文匹配；2. Google Scholar和DLBP（全球两大主要paper数据库）的论文搜索和下载；3. 引用统计；4. 手动信息更新助手；5. 容错搜索匹配；等等。之前的实现由于数据库的限制，很多文章都找不到。EasyLiterature得益于增加了Google Scholar和DLBP的支持，几乎覆盖了所有论文。
 
 
