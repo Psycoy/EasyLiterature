@@ -58,18 +58,18 @@ optional arguments:
 
 Note: `paper_id` supports `the title of the article`, published articles' `doi`, and pre-published articles' `arvix_id`, `biorvix_id`, and `medrvix_id`. It will try all the possible sources online.
 
-- 自动识别 - {xxx}。
-- 当笔记文件中包含- {paper_id}时候，会下载该文献的信息，不下载PDF。
-- 当笔记文件中包含- {{paper_id}}时候，会下载该文献的信息，以及PDF。
+- 自动识别 `- {xxx}`。
+- 当笔记文件中包含`- {paper_id}`时候，会下载该文献的信息，不下载PDF。
+- 当笔记文件中包含`- {{paper_id}}`时候，会下载该文献的信息，以及PDF。
 
-注意：paper_id支持文章标题，已发表文章的doi, 预发布文章的arvix_id, biorvix_id, medrvix_id。EasyLiterature会从多个数据库自动识别需要收集和下载的论文，几乎覆盖所有目前存在的论文。
+注意：paper_id支持`文章标题`，已发表文章的`doi`, 预发布文章的`arvix_id`, `biorvix_id`, `medrvix_id`。EasyLiterature会从多个数据库自动识别需要收集和下载的论文，几乎覆盖所有目前存在的论文。
 
 
 ## Usage（使用）
 ### Basic Usage（基本使用）
 Assuming `input` is the folder path of the literature notes (.md files) and `output` is the folder path where you want to save the PDFs.
 
-假设input为文献笔记(md文件)的文件夹路径，output为要保存PDF的文件夹路径。
+假设`input`为文献笔记(md文件)的文件夹路径，`output`为要保存PDF的文件夹路径。
 
 ```bash
 # Update all md files in the input folder
@@ -85,7 +85,7 @@ easyliter -i input -o output -d
 ### Migrating Notes and PDF Files（笔记和pdf文件的迁移）
 When you need to move the literature notes or the PDF folder, the links to the PDFs in the literature notes might become unusable. You can use `-m` to re-link the PDF files with the literature notes.
 
-当要移动文献笔记或者PDF文件夹的时候，文献笔记中的PDF链接可能会变的无法使用。可以使用-m来重新关联PDF文件和文献笔记。
+当要移动文献笔记或者PDF文件夹的时候，文献笔记中的PDF链接可能会变的无法使用。可以使用`-m`来重新关联PDF文件和文献笔记。
 
 ```bash
 # Update all md files in the input folder
