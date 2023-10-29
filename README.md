@@ -18,7 +18,7 @@ Compared to autoLiterature, **EasyLiterature** is much easier to use and support
 
 
 ## Install (安装)
-1. pip install (to do)
+1. pip install
 ```bash 
 pip install easyliter
 or
