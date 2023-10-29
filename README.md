@@ -8,6 +8,8 @@ Compared to autoLiterature, **EasyLiterature** is much easier to use and support
 
 **EasyLiterature** 是一个基于python的命令行文件管理工具，永久开源，欢迎star或contribute。
 
+之前沐神（李沐）做过一期视频讲如何阅读文献和整理，我觉得讲得非常好，[链接在这](https://www.bilibili.com/video/BV1nA41157y4)。
+
 简单来说，在 Markdown 文件中简单列出想要阅读的论文标题（或ID），它会自动收集并在Markdown文件中完善相关信息，下载论文的PDF到本地机器，并将PDF链接到Markdown文件中的论文。通过这样的流程，我们可以实现永久保存实时编辑的论文PDF和Markdown中的笔记，无论是在本地机器还是云端，并且方便论文一站式分类和管理。
 
 与之前的实现相比，EasyLiterature兼容之前实现的所有功能，并且支持更多功能，比如：1. 基于标题的论文匹配；2. Google Scholar和DLBP（全球两大主要paper数据库）的论文搜索和下载；3. 引用统计；4. 手动信息更新助手；5. 容错搜索匹配；等等。之前的实现由于数据库的限制，很多文章都找不到。EasyLiterature得益于增加了Google Scholar和DLBP的支持，几乎覆盖了所有论文。
