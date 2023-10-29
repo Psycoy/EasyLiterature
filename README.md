@@ -51,7 +51,7 @@ optional arguments:
 ```
 
 
-## Recognition rules (识别规则)：
+## Recognition Rules (识别规则)：
 - Automatically recognizes `- {xxx}`。
 - If the notes file contains`- {paper_id}`, it will download the information of that literature, but not the PDF.
 - If the notes file contains `- {{paper_id}}`, it will download both the information of that literature and the PDF.
