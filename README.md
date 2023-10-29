@@ -29,7 +29,7 @@ pip3 install easyliter
 ```bash
 git clone https://github.com/Psycoy/EasyLiterature.git
 cd EasyLiterature
-python setup.py install
+pip install -e .
 ```
 
 ## Arguments（使用参数）

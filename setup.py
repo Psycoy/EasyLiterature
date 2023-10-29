@@ -18,7 +18,7 @@ setup(
     ],
     install_requires=["beautifulsoup4>=4.11.1", "feedparser>=6.0.10", 
                       "urllib3>=1.26.11","requests>=2.28.1", 
-                      "tqdm>=4.64.0", "Unidecode>=1.3.4", "pandas", "scholarly"],
+                      "tqdm>=4.64.0", "Unidecode>=1.3.4", "bibtexparser==1.4.0", "pandas", "scholarly"],
     entry_points={
         "console_scripts": [
             "easyliter = easy_literature.easyliter:main",
