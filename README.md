@@ -6,6 +6,7 @@ Simply list the paper titles (or ids) you want to read in a markdown file and it
 ---
 
 **A demo of the entries in your markdown note:**
+
 ![demo](figures/demo.png)
 
 ---
@@ -26,6 +27,7 @@ Compared to autoLiterature, **EasyLiterature** is much easier to use and support
 ---
 
 **markdown文件中的论文信息条目（示意）:**
+
 ![demo](figures/demo.png)
 
 ---
