@@ -10,7 +10,7 @@ Compared to autoLiterature, **EasyLiterature** is much easier to use and support
 
 **EasyLiterature** 是一个基于python的命令行文件管理工具，永久开源，欢迎star或contribute。
 
-之前沐神（李沐）做过一期视频讲如何阅读文献和整理，我觉得讲得非常好，[链接在这](https://www.bilibili.com/video/BV1nA41157y4)。
+之前沐神（李沐）做过一期视频讲如何阅读文献和整理，我觉得讲得非常好，[链接](https://www.bilibili.com/video/BV1nA41157y4)。
 
 简单来说，在 Markdown 文件中简单列出想要阅读的论文标题（或ID），它会自动收集并在Markdown文件中完善相关信息，下载论文的PDF到本地机器，并将PDF链接到Markdown文件中的论文。通过这样的流程，我们可以实现永久保存实时编辑的论文PDF和Markdown中的笔记，无论是在本地机器还是云端，并且方便论文一站式分类和管理。
 
