@@ -69,7 +69,7 @@ Note: `paper_id` supports `the title of the article`, published articles' `doi`,
 ### Basic Usage（基本使用）
 Assuming `input` is the folder path of the literature notes (.md files) and `output` is the folder path where you want to save the PDFs.
 
-设input为文献笔记(md文件)的文件夹路径，output为要保存PDF的文件夹路径。
+假设input为文献笔记(md文件)的文件夹路径，output为要保存PDF的文件夹路径。
 
 ```bash
 # Update all md files in the input folder
