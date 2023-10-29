@@ -58,9 +58,9 @@ optional arguments:
 
 Note: `paper_id` supports `the title of the article`, published articles' `doi`, and pre-published articles' `arvix_id`, `biorvix_id`, and `medrvix_id`. It will try all the possible sources online.
 
-自动识别 - {xxx}。
-当笔记文件中包含- {paper_id}时候，会下载该文献的信息，不下载PDF。
-当笔记文件中包含- {{paper_id}}时候，会下载该文献的信息，以及PDF。
+- 自动识别 - {xxx}。
+- 当笔记文件中包含- {paper_id}时候，会下载该文献的信息，不下载PDF。
+- 当笔记文件中包含- {{paper_id}}时候，会下载该文献的信息，以及PDF。
 
 注意：paper_id支持文章标题，已发表文章的doi, 预发布文章的arvix_id, biorvix_id, medrvix_id。EasyLiterature会从多个数据库自动识别需要收集和下载的论文，几乎覆盖所有目前存在的论文。
 
