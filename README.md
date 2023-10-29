@@ -117,5 +117,5 @@ easyliter -i input/example.md -m movedPDFs/
 ### Note (注意事项)
 For users from China mainland, the Google scholar feature may need a VPN to get it work (the citation function is based on the Google Scholar). If you don't have a VPN, some features may be lost.
 
-对于来自中国大陆的用户，Google scholar功能可能需要 VPN 才能正常工作（引用功能基于 Google scholar）。如果没有挂VPN，某些功能可能会丢失。
+对于来自中国大陆的用户，Google scholar功能可能需要 VPN 才能正常工作（引用功能基于 Google scholar）。如果没有挂VPN，某些功能可能会丢失，但不完全影响使用。
 
