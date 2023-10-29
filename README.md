@@ -32,7 +32,7 @@ cd EasyLiterature
 python setup.py install
 ```
 
-### Arguments（使用参数）
+## Arguments（使用参数）
 ```bash
 easyliter
 
@@ -95,6 +95,3 @@ easyliter -i input -m movedPDFs/
 easyliter -i input/example.md -m movedPDFs/  
 ```
 
-
-## License
-MIT
