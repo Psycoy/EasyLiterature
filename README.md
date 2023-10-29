@@ -6,6 +6,8 @@ Simply list the paper titles (or ids) you want to read in a markdown file and it
 Inspired by [Mu Li](https://www.bilibili.com/video/BV1nA41157y4), adapted from [autoLiterature](https://github.com/wilmerwang/autoLiterature). 
 Compared to autoLiterature, **EasyLiterature** is much easier to use and supports a wider range of features, such as `title-based paper match`, `paper search and download on Google Scholar and DLBP` (the two main sites for scholars), `citation statistics`, `mannual information update assitant`, etc. **EasyLiterature covers almost all papers thanks to the support of Google Scholar and DLBP!**
 
+**中文版介绍：**
+
 **EasyLiterature** 是一个基于python的命令行文件管理工具，永久开源，欢迎star或contribute。
 
 之前沐神（李沐）做过一期视频讲如何阅读文献和整理，我觉得讲得非常好，[链接在这](https://www.bilibili.com/video/BV1nA41157y4)。
