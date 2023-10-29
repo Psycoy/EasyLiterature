@@ -68,6 +68,7 @@ Note: `paper_id` supports `the title of the article`, published articles' `doi`,
 ## Usage（使用）
 ### Basic Usage（基本使用）
 Assuming `input` is the folder path of the literature notes (.md files) and `output` is the folder path where you want to save the PDFs.
+
 设input为文献笔记(md文件)的文件夹路径，output为要保存PDF的文件夹路径。
 
 ```bash
@@ -83,6 +84,7 @@ easyliter -i input -o output -d
 
 ### Migrating Notes and PDF Files（笔记和pdf文件的迁移）
 When you need to move the literature notes or the PDF folder, the links to the PDFs in the literature notes might become unusable. You can use `-m` to re-link the PDF files with the literature notes.
+
 当要移动文献笔记或者PDF文件夹的时候，文献笔记中的PDF链接可能会变的无法使用。可以使用-m来重新关联PDF文件和文献笔记。
 
 ```bash
