@@ -1,5 +1,7 @@
 # EasyLiterature
-**EasyLiterature** is a Python-based command line tool for automatic literature management.
+**EasyLiterature** is a Python-based command line tool for automatic literature management. Welcome star or contribute!
+
+（**EasyLiterature** 是一个基于python的命令行文件管理工具，永久开源，欢迎star或contribute）
 
 Simply list the paper titles (or ids) you want to read in a markdown file and it will automatically `collect and refine its information in the markdown file`, `download the pdf to your local machine`, and `link the pdf to your paper in the markdown file`. You can forever keep your notes within the pdfs and mds on your local machine or cloud driver.
 
