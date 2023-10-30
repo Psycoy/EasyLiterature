@@ -37,7 +37,7 @@ ___
 <br><br>
 
 ## 1. A Simple Usage Example (一个简单的使用示例)
-1. Have the python installed on your local machine (preferably python version 3.8, 3.9, and 3.11).
+1. Have the python installed on your local machine (preferably python version 3.8, 3.9, 3.10, and 3.11).
 2. Run `pip install easyliter` in your command line to install.
 3. Prepare your markdown note file (e.g., `Note.md`). <br>**Attention:** You may need to download a markdown editor to create/edit this file. I am using [Typora](https://typora.io/), which is not totally free. You can also choose other alternatives.
 4. List the formated papers titles in your markdown note file according to the Section 4 below (Recognition Rules). e.g.,<br>
@@ -77,7 +77,7 @@ or
 pip3 install easyliter
 ```
 
-### install from source
+### install from source（to get the up-to-date version）
 ```bash
 git clone https://github.com/Psycoy/EasyLiterature.git
 cd EasyLiterature
@@ -99,7 +99,7 @@ optional arguments:
   Folder path to save paper pdfs and images. NOTE: MUST BE FOLDER.
 
   -p PROXY, --proxy PROXY
-  The proxy. e.g. 127.0.0.1:1080. If this argument is specified, the google scholar will automatically use a free proxy (not necessarily using the specified proxy address). To use other proxies for google scholar, specify the -gp option. If you want to set up the proxies mannually, change the behaviour in GoogleScholar.set_proxy().
+  The proxy. e.g. 127.0.0.1:1080. If this argument is specified, the google scholar will automatically use a free proxy (not necessarily using the specified proxy address). To use other proxies for google scholar, specify the -gp option. If you want to set up the proxies mannually, change the behaviour in GoogleScholar.set_proxy(). See more at https://scholarly.readthedocs.io/en/stable/ProxyGenerator.html.
 
   -gp GPROXY_MODE, --gproxy_mode GPROXY_MODE
   The proxy type used for scholarly. e.g., free, single, Scraper. (Note: 1. <free> will automatically choose a free proxy address to use, which is free, but may not be fast. 2. <single> will use the proxy address you specify. 3. <Scraper> is not free to use and need to buy the api key.).
@@ -167,6 +167,6 @@ easyliter -i input/example.md -m movedPDFs/
 
   - 对于来自中国大陆的用户，Google Scholar相关功能可能需要 VPN 才能正常工作（引用功能基于 Google scholar）。如果没有挂VPN，某些功能可能会丢失，但不完全影响使用。
 
-2. If your Google Scholar is not working, try to set a proxy for it. Check out the help for `-p` and `-gp` options using `easyliter -h`.
+2. If your Google Scholar is not working (usually caused by too frequent requests of the Google Scholar API), try to set a proxy for it. Check out the help for `-p` and `-gp` options using `easyliter -h`. See more at the 'Using proxies' section of https://scholarly.readthedocs.io/en/stable/quickstart.html.
 
-  - 如果Google Scholar 无法使用，尝试为其设置代理。使用 easyliter -h 查看 -p 和 -gp 选项的帮助信息来设置代理。
+  - 如果Google Scholar 无法使用（通常由于对Google Scholar API的访问过于频繁），尝试为其设置代理。使用 easyliter -h 查看 -p 和 -gp 选项的帮助信息来设置代理。详见 https://scholarly.readthedocs.io/en/stable/quickstart.html 的 Using proxies部分。
