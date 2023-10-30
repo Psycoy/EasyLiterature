@@ -64,14 +64,14 @@ ___
 8. 这是一个简单、常用的使用案例。有关其他功能或使用情形，请仔细阅读以下部分并按照说明操作。
 
 ## 2. Install (安装)
-1. pip install
+### pip install
 ```bash 
 pip install easyliter
 or
 pip3 install easyliter
 ```
 
-2. install from source
+### install from source
 ```bash
 git clone https://github.com/Psycoy/EasyLiterature.git
 cd EasyLiterature
@@ -107,17 +107,17 @@ optional arguments:
 
 
 ## 4. Recognition Rules (识别规则)：
-- Automatically recognizes `- {xxx}`。
-- If the notes file contains`- {paper_id}`, it will download the information of that literature, but not the PDF.
+- If the notes file contains `- {paper_id}`, it will download the information of that literature, but not the PDF.
 - If the notes file contains `- {{paper_id}}`, it will download both the information of that literature and the PDF.
 
-Note: `paper_id` supports `the title of the article`, published articles' `doi`, and pre-published articles' `arvix_id`, `biorvix_id`, and `medrvix_id`. It will try all the possible sources online.
+- Note: `paper_id` supports `article title`, published articles' `doi`, and pre-published articles' `arvix_id`, `biorvix_id`, and `medrvix_id`. It will try all the possible sources online.
 
-- 自动识别 `- {xxx}`。
-- 当笔记文件中包含`- {paper_id}`时候，会下载该文献的信息，不下载PDF。
-- 当笔记文件中包含`- {{paper_id}}`时候，会下载该文献的信息，以及PDF。
+___
 
-注意：paper_id支持`文章标题`，已发表文章的`doi`, 预发布文章的`arvix_id`, `biorvix_id`, `medrvix_id`。EasyLiterature会从多个数据库自动识别需要收集和下载的论文，几乎覆盖所有目前存在的论文。
+- 当笔记文件中包含 `- {paper_id}`时候，会下载该文献的信息，不下载PDF。
+- 当笔记文件中包含 `- {{paper_id}}`时候，会下载该文献的信息，以及PDF。
+
+- 注意：`paper_id` 支持`文章标题`，已发表文章的`doi`, 预发布文章的`arvix_id`, `biorvix_id`, `medrvix_id`。EasyLiterature会从多个数据库自动识别需要收集和下载的论文，几乎覆盖所有目前存在的论文。
 
 
 ## 5. Usage（使用）
@@ -128,12 +128,15 @@ Assuming `input` is the folder path of the literature notes (.md files) and `out
 
 ```bash
 # Update all md files in the input folder
+# 更新input文件夹下所有md文件
 easyliter -i input -o output 
 
 # Only update the input/example.md file
+# 仅更新input/example.md文件
 easyliter -i input/example.md -o output  
 
 # -d is an optional flag, when -i is a folder path, using -d will delete unrelated pdf files in the PDF folder from the literature notes content
+# -d 是个可选项，当 -i 是文件夹路径时候，使用 -d 会删除PDF文件夹下和文献笔记内容无关的pdf文件
 easyliter -i input -o output -d
 ```
 
@@ -144,9 +147,11 @@ When you need to move the literature notes or the PDF folder, the links to the P
 
 ```bash
 # Update all md files in the input folder
+# 更新input文件夹下所有md文件
 easyliter -i input -m movedPDFs/
 
 # Only update the input/example.md file
+# 仅更新input/example.md文件
 easyliter -i input/example.md -m movedPDFs/  
 ```
 
