@@ -1,7 +1,7 @@
 Metadata-Version: 2.1
 Name: easyliter
-Version: 1.0.0
-Summary:  Helps you manage your literature notes
+Version: 1.0.2
+Summary: EasyLiterature is a opensourced, Python-based command line tool for automatic literature management. Simply list the paper titles (or ids) you want to read in a markdown file and it will automatically collect and refine its information in the markdown file, download the pdf to your local machine, and link the pdf to your paper in the markdown file. You can forever keep your notes within the pdfs and mds on your local machine or cloud driver.
 Home-page: https://github.com/Psycoy/EasyLiterature
 Author: Oliver
 Author-email: olivernova1998@gmail.com
@@ -30,7 +30,7 @@ Simply list the paper titles (or ids) you want to read in a markdown file and it
 Inspired by [Mu Li](https://www.bilibili.com/video/BV1nA41157y4), adapted from [autoLiterature](https://github.com/wilmerwang/autoLiterature). 
 Compared to autoLiterature, **EasyLiterature** is much easier to use and supports a wider range of features, such as `title-based paper match`, `paper search and download on Google Scholar and DLBP` (the two main sites for scholars), `citation statistics`, `mannual information update assitant`, etc. **EasyLiterature covers almost all papers thanks to the support of Google Scholar and DLBP!**
 
---
+___
 
 **中文版介绍：**
 
@@ -72,17 +72,29 @@ pip install -e .
 easyliter
 
 optional arguments:
+
   -h, --help            show this help message and exit
+  
   -i INPUT, --input INPUT
-                        The path to the note file or note file folder.
+  The path to the note file or note file folder.
+
   -o OUTPUT, --output OUTPUT
-                        Folder path to save paper pdfs and iamges. NOTE: MUST BE FOLDER
+  Folder path to save paper pdfs and iamges. NOTE: MUST BE FOLDER
+
   -p PROXY, --proxy PROXY
-                        The proxy. e.g. 127.0.0.1:1080. If this argument is specified, the google scholar will automatically use a free proxy (not necessarily this proxy). To use other proxies for google scholar, change the behaviour in GoogleScholar.set_proxy.
-  -d, --delete          Delete unreferenced attachments in notes. Use with caution,
-                        when used, -i must be a folder path including all notes
+  The proxy. e.g. 127.0.0.1:1080. If this argument is specified, the google scholar will automatically use a free proxy (not necessarily using the specified proxy address). To use other proxies for google scholar, specify the -gp option. If you want to set up the proxies mannually, change the behaviour in GoogleScholar.set_proxy
+
+  -gp GPROXY_MODE, --gproxy_mode GPROXY_MODE
+  The proxy type used for scholarly. e.g., free, single, Scraper. (Note: 1. <free> will automatically choose a free proxy address to use, which is free, but may not be fast. 2. <single> will use the proxy address you specify. 3. <Scraper> is not free to use and need to buy the api key.).
+
+  -d, --delete
+  Delete unreferenced attachments in notes. Use with caution, when used, 
+  
+  -i 
+  must be a folder path including all notes
+
   -m MIGRATION, --migration MIGRATION
-                        the pdf folder path you want to reconnect to
+  the pdf folder path you want to reconnect to
 ```
 
 
@@ -131,7 +143,11 @@ easyliter -i input/example.md -m movedPDFs/
 ```
 
 ### Note (注意事项)
-For users from China mainland, the Google scholar feature may need a VPN to get it work (the citation function is based on the Google Scholar). If you don't have a VPN, some features may be lost.
 
-对于来自中国大陆的用户，Google Scholar相关功能可能需要 VPN 才能正常工作（引用功能基于 Google scholar）。如果没有挂VPN，某些功能可能会丢失，但不完全影响使用。
+1. For users from China mainland, the Google Scholar feature may need a VPN to get it work (the citation function is based on the Google Scholar). If you don't have a VPN, some features may be lost.
 
+  - 对于来自中国大陆的用户，Google Scholar相关功能可能需要 VPN 才能正常工作（引用功能基于 Google scholar）。如果没有挂VPN，某些功能可能会丢失，但不完全影响使用。
+
+2. If your Google Scholar is not working, try to set a proxy for it. Check out the help for `-p` and `-gp` options using `easyliter -h`.
+
+  - 如果Google Scholar 无法使用，尝试为其设置代理。使用 easyliter -h 查看 -p 和 -gp 选项的帮助信息来设置代理。

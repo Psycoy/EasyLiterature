@@ -106,14 +106,14 @@ def classify_identifier(identifier):
         return False 
 
 
-def get_update_content(m, note_file, pdfs_path, proxy):
+def get_update_content(m, note_file, pdfs_path, proxy, gproxy_mode):
     
     replace_dict = dict()
     for literature in tqdm(m):
         pdf = classify_identifier(literature)
         
         literature_id = literature.split('{')[-1].split('}')[0]
-        bib = get_paper_info_from_paperid(literature_id, proxy=proxy)
+        bib = get_paper_info_from_paperid(literature_id, proxy=proxy, gproxy_mode=gproxy_mode)
         
         if bib:
             try:
