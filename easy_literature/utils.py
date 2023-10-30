@@ -117,7 +117,16 @@ def get_update_content(m, note_file, pdfs_path, proxy):
         
         if bib:
             try:
-                pdf_name = '_'.join(bib['title'].split(' ')) + '.pdf'
+                pdf_name = bib['title']
+                # remove blank symbol, like \n, \t, \r
+                pdf_name = re.sub(r'[\n\t\r]', '', pdf_name)
+                # remove multiple blank spaces
+                pdf_name = re.sub(r' +', ' ', pdf_name)
+
+                pdf_name = '_'.join(pdf_name.split(' ')) + '.pdf'
+
+                # remove the special characters in the pdf name: / \ : * ? " < > |
+                pdf_name = re.sub(r'[\\/:*?"<>|]', '', pdf_name)
                 pdf_path = os.path.join(pdfs_path, pdf_name)
                 
                 if pdf:
