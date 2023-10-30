@@ -42,9 +42,12 @@ ___
 3. Prepare your markdown note file (e.g., `Note.md`). <br>**Attention:** You may need to download a markdown editor to create/edit this file. I am using [Typora](https://typora.io/), which is not totally free. You can also choose other alternatives.
 4. List the formated papers titles in your markdown note file according to the Section 4 below (Recognition Rules). e.g.,<br>
   \- {{BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding.}}<br>
-  \- {{Xlnet: Generalized autoregressive pretraining for language understanding.}}
+  \- {{Xlnet: Generalized autoregressive pretraining for language understanding.}}<br>
+  **(pay attention to the space after ‘\-’)** 
 5. Create a folder to store the downloaded pdfs (e.g., `PDFs/`).
-6. Run `easyliter -i <path to your md file> -o <path to your pdf folder>`.<br> (Replace `<path to your md file>` with the actual path to your markdown note file, `<path to your pdf folder>` with the actual path to your pdf folder)
+6. Run `easyliter -i <path to your md file> -o <path to your pdf folder>`. 
+<br> (Replace `<path to your md file>` with the actual path to your markdown note file, `<path to your pdf folder>` with the actual path to your pdf folder)
+<br>e.g., `easyliter -i "/home/Note.md" -o "/home/PDFs"`
 7. Your should able to see that the updated information and downloaded pdf files if no error is reported.
 8. This is a simple and common use case. For other features, please read the below sections carefully and follow the instructions.
 
@@ -57,9 +60,12 @@ ___
 3. 准备您的 markdown 笔记文件（例如，`Note.md`）。<br>**注意**： 您需要下载一个 markdown 编辑器来创建/编辑此文件。我使用的是[Typora](https://typora.io/)，它不是完全免费的。您也可以选择其他替代产品。
 4. 根据下面第4节（识别规则）在您的 markdown 笔记文件中列出格式化的论文标题。例如：<br>
 \- {{BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding.}}<br>
-  \- {{Xlnet: Generalized autoregressive pretraining for language understanding.}}
+  \- {{Xlnet: Generalized autoregressive pretraining for language understanding.}}<br>
+  **(注意‘\-’后的空格)** 
 5. 创建一个文件夹来存储下载的 pdf 文件（例如，`PDFs/`）。
-6. 运行 `easyliter -i <您的 md 文件路径> -o <您的 pdf 文件夹路径>`。<br>**注意**：将 `<您的 md 文件路径>` 替换为您 markdown 笔记文件的实际路径，将 `<您的 pdf 文件夹路径>` 替换为您 pdf 文件夹的实际路径。
+6. 运行 `easyliter -i <您的 md 文件路径> -o <您的 pdf 文件夹路径>`。
+<br>**注意**：将 `<您的 md 文件路径>` 替换为您 markdown 笔记文件的实际路径，将 `<您的 pdf 文件夹路径>` 替换为您 pdf 文件夹的实际路径。
+<br>例如：`easyliter -i "/home/Note.md" -o "/home/PDFs"`
 7. 如果没有报错，您应该能够看到更新的信息和下载的 pdf 文件。
 8. 这是一个简单、常用的使用案例。有关其他功能或使用情形，请仔细阅读以下部分并按照说明操作。
 
