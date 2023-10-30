@@ -5,7 +5,7 @@ import os
 from .utils import patternRecognizer, note_modified, get_pdf_paths, get_pdf_paths_from_notes, get_update_content, get_pdf_paths_from_notes_dict
 
 logging.basicConfig()
-logger = logging.getLogger('AutoLiter')
+logger = logging.getLogger('easyliter')
 logger.setLevel(logging.INFO)
 
 
