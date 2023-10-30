@@ -32,7 +32,7 @@ ___
 
 <br>
 
-与之前的实现相比，EasyLiterature兼容之前实现的所有功能，并且支持更多功能，比如：1. 基于标题的论文匹配；2. Google Scholar和DLBP（全球两大主要paper数据库）的论文搜索和下载；3. 引用统计；4. 手动信息更新助手；5. 容错搜索匹配；等等。之前的实现由于数据库的限制，很多文章都找不到。EasyLiterature得益于增加了Google Scholar和DLBP的支持，几乎覆盖了所有论文。
+与之前的实现相比，EasyLiterature兼容之前实现的所有功能，并且支持更多功能，比如：1. 基于标题的论文匹配；2. Google Scholar和DLBP（全球两大主要paper数据库）的论文搜索和下载；3. 引用统计；4. 手动信息更新助手；5. 容错搜索匹配；等等。之前的实现由于数据库的限制，很多文章都找不到。**EasyLiterature得益于增加了Google Scholar和DLBP的支持，几乎覆盖了所有论文!**
 
 <br><br>
 
