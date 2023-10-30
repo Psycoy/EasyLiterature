@@ -16,16 +16,16 @@ def set_args():
     parser.add_argument('-i', '--input', required=True, type=str, default=None,
                         help="The path to the note file or note file folder.")
     parser.add_argument('-o', '--output', type=str, default=None,
-                        help='Folder path to save paper pdfs and iamges. NOTE: MUST BE FOLDER')
+                        help='Folder path to save paper pdfs and images. NOTE: MUST BE FOLDER.')
     parser.add_argument('-p', '--proxy', type=str, default=None, 
-                        help='The proxy address. e.g. 127.0.0.1:1080. If this argument is specified, the google scholar will automatically use a free proxy (not necessarily using the specified proxy address). To use other proxies for google scholar, specify the -gp option. If you want to set up the proxies mannually, change the behaviour in GoogleScholar.set_proxy')
+                        help='The proxy address. e.g. 127.0.0.1:1080. If this argument is specified, the google scholar will automatically use a free proxy (not necessarily using the specified proxy address). To use other proxies for google scholar, specify the -gp option. If you want to set up the proxies mannually, change the behaviour in GoogleScholar.set_proxy().  See more at https://scholarly.readthedocs.io/en/stable/ProxyGenerator.html.')
     parser.add_argument('-gp', '--gproxy_mode', type=str, default='free', 
                         help='The proxy type used for scholarly. e.g., free, single, Scraper. (Note: 1. <free> will automatically choose a free proxy address to use, which is free, but may not be fast. 2. <single> will use the proxy address you specify. 3. <Scraper> is not free to use and need to buy the api key.).')
     parser.add_argument('-d', '--delete', action='store_true',
                         help='Delete unreferenced attachments in notes. Use with caution, '
-                        'when used, -i must be a folder path including all notes')
+                        'when used, -i must be a folder path including all notes.')
     parser.add_argument('-m', '--migration', type=str, default=None, 
-                        help="the pdf folder path you want to reconnect to")
+                        help="The pdf folder path you want to reconnect to.")
     args = parser.parse_args()
     
     return args 

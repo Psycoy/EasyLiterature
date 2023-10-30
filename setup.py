@@ -5,7 +5,7 @@ with open('README.md', 'r', encoding='UTF-8') as f:
 
 setup(
     name="easyliter",
-    version="1.0.2",
+    version="1.0.3",
     description="EasyLiterature is a opensourced, Python-based command line tool for automatic literature management. Simply list the paper titles (or ids) you want to read in a markdown file and it will automatically collect and refine its information in the markdown file, download the pdf to your local machine, and link the pdf to your paper in the markdown file. You can forever keep your notes within the pdfs and mds on your local machine or cloud driver.",
     long_description=README_MD,
     long_description_content_type='text/markdown',
