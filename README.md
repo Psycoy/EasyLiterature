@@ -37,7 +37,7 @@ ___
 <br><br>
 
 ## 1. A Simple Usage Example (一个简单的使用示例)
-1. Have the python installed on your local machine (preferably python version 3.8, 3.9, 3.10, and 3.11).
+1. Have the python installed on your local machine (preferably >= 3.7).
 2. Run `pip install easyliter` in your command line to install.
 3. Prepare your markdown note file (e.g., `Note.md`). <br>**Attention:** You may need to download a markdown editor to create/edit this file. I am using [Typora](https://typora.io/), which is not totally free. You can also choose other alternatives.
 4. List the formated papers titles in your markdown note file according to the Section 4 below (Recognition Rules). e.g.,<br>
@@ -55,7 +55,7 @@ ___
 
 **中文版示例**
 
-1. 在您的本地机器上安装 Python（最好是 Python 3.8，3.9，3.10，或 3.11 版本）。
+1. 在您的本地机器上安装 Python（版本 >= 3.7）。
 2. 在命令行中运行 `pip install easyliter` 进行安装。
 3. 准备您的 markdown 笔记文件（例如，`Note.md`）。<br>**注意**： 您需要下载一个 markdown 编辑器来创建/编辑此文件。我使用的是[Typora](https://typora.io/)，它不是完全免费的。您也可以选择其他替代产品。
 4. 根据下面第4节（识别规则）在您的 markdown 笔记文件中列出格式化的论文标题。例如：<br>
