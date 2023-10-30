@@ -12,20 +12,20 @@ logger.setLevel(logging.INFO)
 
 
 def set_args():
-    parser = argparse.ArgumentParser(description='autoLiterature')
+    parser = argparse.ArgumentParser(description='EasyLiterature')
     parser.add_argument('-i', '--input', required=True, type=str, default=None,
                         help="The path to the note file or note file folder.")
     parser.add_argument('-o', '--output', type=str, default=None,
-                        help='Folder path to save paper pdfs and iamges. NOTE: MUST BE FOLDER')
+                        help='Folder path to save paper pdfs and images. NOTE: MUST BE FOLDER.')
     parser.add_argument('-p', '--proxy', type=str, default=None, 
-                        help='The proxy. e.g. 127.0.0.1:1080')
+                        help='The proxy address. e.g. 127.0.0.1:1080. If this argument is specified, the google scholar will automatically use a free proxy (not necessarily using the specified proxy address). To use other proxies for google scholar, specify the -gp option. If you want to set up the proxies mannually, change the behaviour in GoogleScholar.set_proxy().  See more at https://scholarly.readthedocs.io/en/stable/ProxyGenerator.html.')
     parser.add_argument('-gp', '--gproxy_mode', type=str, default='free', 
-                        help='The proxy type used for scholarly. e.g., free, single')
+                        help='The proxy type used for scholarly. e.g., free, single, Scraper. (Note: 1. <free> will automatically choose a free proxy address to use, which is free, but may not be fast. 2. <single> will use the proxy address you specify. 3. <Scraper> is not free to use and need to buy the api key.).')
     parser.add_argument('-d', '--delete', action='store_true',
                         help='Delete unreferenced attachments in notes. Use with caution, '
-                        'when used, -i must be a folder path including all notes')
+                        'when used, -i must be a folder path including all notes.')
     parser.add_argument('-m', '--migration', type=str, default=None, 
-                        help="the pdf folder path you want to reconnect to")
+                        help="The pdf folder path you want to reconnect to.")
     args = parser.parse_args()
     
     return args 
@@ -37,11 +37,12 @@ def check_args():
     delete_bool = args.delete
     migration_path = args.migration
     proxy = args.proxy
+    gproxy_mode = args.gproxy_mode
         
-    return input_path, output_path, delete_bool, proxy, migration_path
+    return input_path, output_path, delete_bool, proxy, migration_path, gproxy_mode
 
 
-def get_bib_and_pdf(note_file, output_path, proxy, paper_recognizer):
+def get_bib_and_pdf(note_file, output_path, proxy, paper_recognizer, gproxy_mode):
     
     pdfs_path = output_path
     if not os.path.exists(pdfs_path):
@@ -54,18 +55,17 @@ def get_bib_and_pdf(note_file, output_path, proxy, paper_recognizer):
     logger.info("Number of files to download -  {}".format(len(m)))
 
     if not m:
-        logger.info("The file {} is not found, not updated.".format(note_file))
+        logger.info("The file {} is not found, or there is no valid entry in the file.".format(note_file))
     else:
-        # TODO add pd_online link in note file
-        replace_dict = get_update_content(m, note_file, pdfs_path, proxy=proxy)
+        replace_dict = get_update_content(m, note_file, pdfs_path, proxy=proxy, gproxy_mode=gproxy_mode)
             
         return replace_dict
 
 
-def file_update(input_path, output_path, proxy, paper_recognizer):
+def file_update(input_path, output_path, proxy, paper_recognizer, gproxy_mode):
     
     replace_dict =  get_bib_and_pdf(input_path, output_path,
-                                    proxy, paper_recognizer)
+                                    proxy, paper_recognizer, gproxy_mode)
     # logger.info(replace_dict)
     
     if replace_dict:
@@ -73,14 +73,14 @@ def file_update(input_path, output_path, proxy, paper_recognizer):
 
 
 def main():
-    input_path, output_path, delete_bool, proxy, migration_path = check_args()
+    input_path, output_path, delete_bool, proxy, migration_path, gproxy_mode = check_args()
     
     if output_path:
         paper_recognizer = patternRecognizer(r'- \{.{3,}\}')
         
         if os.path.isfile(input_path):
             logger.info("Updating the file {}".format(input_path))
-            file_update(input_path, output_path, proxy, paper_recognizer)
+            file_update(input_path, output_path, proxy, paper_recognizer, gproxy_mode)
             
         elif os.path.isdir(input_path):
             note_paths = []
@@ -90,7 +90,7 @@ def main():
                         note_paths.append(os.path.join(root, file))
             for note_path in note_paths:
                 logger.info("Updating the file {}".format(note_path))
-                file_update(note_path, output_path, proxy, paper_recognizer)
+                file_update(note_path, output_path, proxy, paper_recognizer, gproxy_mode)
         else:
             logger.info("input path {} does not exist".format(input_path))
     
