@@ -1,6 +1,7 @@
 import logging
 import re 
-import os 
+import os
+import platform
 
 from .arxiv import arxivInfo
 from .crossref import crossrefInfo
@@ -107,8 +108,13 @@ def get_paper_pdf_from_paperid(paper_id, path, proxy=None, direct_url=None):
     else:
         content = pdf_downloader.get_pdf_from_sci_hub(paper_id)
     try:
-        if not os.path.exists(path.rsplit("/", 1)[0]):
-            os.makedirs(path.rsplit("/", 1)[0])
+        system = platform.system()
+        if system == 'Windows':
+            pdf_dir = path.rsplit("\\", 1)[0]
+        else:
+            pdf_dir = path.rsplit("/", 1)[0]
+        if not os.path.exists(pdf_dir):
+            os.makedirs(pdf_dir)
         pdf_downloader._save(content['pdf'], path)
     except:
         pass 

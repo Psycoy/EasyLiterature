@@ -66,7 +66,6 @@ def file_update(input_path, output_path, proxy, paper_recognizer, gproxy_mode):
     
     replace_dict =  get_bib_and_pdf(input_path, output_path,
                                     proxy, paper_recognizer, gproxy_mode)
-    # logger.info(replace_dict)
     
     if replace_dict:
         note_modified(paper_recognizer, input_path, **replace_dict)
@@ -133,7 +132,6 @@ def main():
             
             matched_numb += len(matched_pdfs)
 
-            # os.path.relpath(pdf_path, note_file).split('/',1)[-1]
             replace_paths_dict = {}
             for matched in matched_pdfs:
                 replaced_str = os.path.relpath(pdf_paths_dict[matched], md_file).split('/',1)[-1]

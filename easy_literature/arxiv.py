@@ -168,8 +168,6 @@ if __name__ == "__main__":
     arxiv_info.set_proxy_handler(proxy="127.0.1:1123")
     
     bib_arxiv = arxiv_info.get_info_by_arxivid(arxivId)
-    # bib_title = arxiv_info.get_info_by_title(title)
     
     print(bib_arxiv)
     print("\n")
-    # print(bib_title)
