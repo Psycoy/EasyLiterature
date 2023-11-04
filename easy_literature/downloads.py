@@ -110,6 +110,7 @@ def get_paper_pdf_from_paperid(paper_id, path, proxy=None, direct_url=None):
     try:
         system = platform.system()
         if system == 'Windows':
+            path = path.replace("/", "\\")
             pdf_dir = path.rsplit("\\", 1)[0]
         else:
             pdf_dir = path.rsplit("/", 1)[0]
@@ -117,7 +118,7 @@ def get_paper_pdf_from_paperid(paper_id, path, proxy=None, direct_url=None):
             os.makedirs(pdf_dir)
         pdf_downloader._save(content['pdf'], path)
     except:
-        pass 
+        pass
     
 
 
