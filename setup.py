@@ -27,6 +27,6 @@ setup(
     packages=find_packages(),
     license="AGPLv3",
     author="Oliver",
-    author_email="olivernova1998@gmail.com",
+    author_email="jinjieni@outlook.com",
     keywords=["title", "bibtex", "arxiv", "doi", "science", "scientific-journals"],
 )
