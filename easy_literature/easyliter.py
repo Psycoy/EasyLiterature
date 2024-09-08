@@ -48,7 +48,7 @@ def get_bib_and_pdf(note_file, output_path, proxy, paper_recognizer, gproxy_mode
     if not os.path.exists(pdfs_path):
         os.makedirs(pdfs_path)
     
-    with open(note_file, 'r') as f:
+    with open(note_file, 'r', encoding='utf-8') as f:
         content = f.read()
             
     m = paper_recognizer.findall(content)

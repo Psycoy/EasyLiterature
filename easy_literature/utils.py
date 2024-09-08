@@ -34,12 +34,12 @@ class patternRecognizer(object):
     
 
 def note_modified(pattern_recog, md_file, **replace_dict):
-    with open(md_file, 'r') as f:
+    with open(md_file, 'r', encoding='utf-8') as f:
         content = f.read()
     
     replaced_content = pattern_recog.multiple_replace(content, **replace_dict)
 
-    with open(md_file, 'w') as f:
+    with open(md_file, 'w', encoding='utf-8') as f:
         f.write(''.join(replaced_content))
         
 
@@ -63,7 +63,7 @@ def get_pdf_paths_from_notes(md_root, reg):
     
     pdf_paths_from_notes = []
     for md_file in md_files:
-        with open(md_file, 'r') as f:
+        with open(md_file, 'r', encoding='utf-8') as f:
             content = f.read()
         m = reg.findall(content)
         m = [i.split("(")[-1].split(')')[0] for i in m]
@@ -82,13 +82,13 @@ def get_pdf_paths_from_notes_dict(md_root, reg):
                     md_files.append(os.path.join(root, file))
     
         for md_file in md_files:
-            with open(md_file, 'r') as f:
+            with open(md_file, 'r', encoding='utf-8') as f:
                 content = f.read()
             m = reg.findall(content)
             m = [i.split("(")[-1].split(')')[0] for i in m]
             pdf_paths_from_notes_dict[md_file] = m
     else:
-        with open(md_root, 'r') as f:
+        with open(md_root, 'r', encoding='utf-8') as f:
             content = f.read()
         m = reg.findall(content)
         m = [i.split("(")[-1].split(')')[0] for i in m]
