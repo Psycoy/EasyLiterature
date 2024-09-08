@@ -155,7 +155,7 @@ def get_update_content(m, note_file, pdfs_path, proxy, gproxy_mode):
                 if os.path.exists(pdf_path):
                     replaced_literature = "- **{}**. {} et.al. **{}**, **{}**, **Number of Citations: **{}, ([pdf]({}))([link]({})).".format(
                                         bib['title'], bib["author"].split(" and ")[0], bib['journal'], 
-                                        bib['year'], bib['cited_count'], os.path.relpath(pdf_path, note_file).split('/',1)[-1], 
+                                        bib['year'], bib['cited_count'], os.path.relpath(pdf_path, os.path.dirname(note_file)).split('/',1)[-1], 
                                         bib['url'])
                 else:
                     logger.info("Can not find a downloading source for literature id {}. You may need to manually download this paper, a template has been generated in the markdown file. Put the pdf file in the folder you specified just now and add its name in the '(pdf)' of your markdown entry.".format(literature_id))
